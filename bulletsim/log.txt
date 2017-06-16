@@ -1,0 +1,343 @@
+n bt
+==> Expanding alias 'bt' from 'catkin bt' to 'catkin b --this'
+==> Expanding alias 'b' from 'catkin b --this' to 'catkin build --this'
+-------------------------------------------------------------------------------------------------------------------
+Profile: default
+Extending:[cached] /home/ban-masa/ros/indigo/devel:/home/ban-masa/ros/indigo_parent/devel:/opt/ros/indigo
+Workspace:    /home/ban-masa/workspace/bullet_ws
+-------------------------------------------------------------------------------------------------------------------
+Source Space:  [exists] /home/ban-masa/workspace/bullet_ws/src
+Log Space:[exists] /home/ban-masa/workspace/bullet_ws/logs
+Build Space:   [exists] /home/ban-masa/workspace/bullet_ws/build
+Devel Space:   [exists] /home/ban-masa/workspace/bullet_ws/devel
+Install Space: [unused] /home/ban-masa/workspace/bullet_ws/install
+DESTDIR:  [unused] None
+-------------------------------------------------------------------------------------------------------------------
+Devel Space Layout:linked
+Install Space Layout:   None
+-------------------------------------------------------------------------------------------------------------------
+Additional CMake Args:  None
+Additional Make Args:   None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments: False
+-------------------------------------------------------------------------------------------------------------------
+Whitelisted Packages:   None
+Blacklisted Packages:   None
+-------------------------------------------------------------------------------------------------------------------
+Workspace configuration appears valid.
+-------------------------------------------------------------------------------------------------------------------
+[build] Found '2' packages in 0.0 seconds.
+[build] Package table is up to date.
+Starting  >>> bulletsim_msgs
+Finished  <<< bulletsim_msgs [ 0.3 seconds ]
+Starting  >>> bulletsim
+_____________________________________________________________________________________________________________________________________________
+Errors<< bulletsim:make /home/ban-masa/workspace/bullet_ws/logs/bulletsim/build.make.002.log
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp: In member function ‘virtual osg::Geometry* osgwTools::TangentSpaceOp::operator()(osg::Geometry&)’:
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:74:14: error: ‘class osg::Geometry’ has no member named ‘setVertexAttribData’
+geom.setVertexAttribData( _normalIndex,
+    ^
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:75:13: error: ‘ArrayData’ is not a member of ‘osg::Geometry’
+    osg::Geometry::ArrayData( _tsg->getNormalArray(), osg::Geometry::BIND_PER_VERTEX ) );
+^
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:78:14: error: ‘class osg::Geometry’ has no member named ‘setVertexAttribData’
+geom.setVertexAttribData( _tangentIndex,
+    ^
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:79:13: error: ‘ArrayData’ is not a member of ‘osg::Geometry’
+    osg::Geometry::ArrayData( _tsg->getTangentArray(), osg::Geometry::BIND_PER_VERTEX ) );
+^
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:82:14: error: ‘class osg::Geometry’ has no member named ‘setVertexAttribData’
+geom.setVertexAttribData( _binormalIndex,
+    ^
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TangentSpaceOp.cpp:83:13: error: ‘ArrayData’ is not a member of ‘osg::Geometry’
+    osg::Geometry::ArrayData( _tsg->getBinormalArray(), osg::Geometry::BIND_PER_VERTEX ) );
+^
+In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:21:0:
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h: In instantiation of ‘bool osgwTools::transparentDisable(T*, bool) [with T = osg::Node]’:
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:136:31:   required from here
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h:138:55: error: ‘isTransparent’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+if( !isTransparent( nodeOrDrawable->getStateSet() ) )
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:34:6: note: ‘bool osgwTools::isTransparent(const osg::StateSet*)’ declared here, later in the translation unit
+bool isTransparent( const osg::StateSet* stateSet )
+  ^
+  In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:21:0:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h: In instantiation of ‘bool osgwTools::transparentDisable(T*, bool) [with T = osg::Geode]’:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:144:32:   required from here
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h:138:55: error: ‘isTransparent’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+if( !isTransparent( nodeOrDrawable->getStateSet() ) )
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:34:6: note: ‘bool osgwTools::isTransparent(const osg::StateSet*)’ declared here, later in the translation unit
+bool isTransparent( const osg::StateSet* stateSet )
+  ^
+  In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:21:0:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h: In instantiation of ‘bool osgwTools::transparentDisable(T*, bool) [with T = osg::Drawable]’:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:149:54:   required from here
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.h:138:55: error: ‘isTransparent’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+if( !isTransparent( nodeOrDrawable->getStateSet() ) )
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/TransparencyUtils.cpp:34:6: note: ‘bool osgwTools::isTransparent(const osg::StateSet*)’ declared here, later in the translation unit
+bool isTransparent( const osg::StateSet* stateSet )
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/CountsVisitor.cpp: In member function ‘void osgwTools::CountsVisitor::apply(osg::Drawable*)’:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/CountsVisitor.cpp:229:20: error: ‘class osg::Geometry’ has no member named ‘areFastPathsUsed’
+if (!geom->areFastPathsUsed())
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/ShortEdgeOp.cpp: In member function ‘void osgwTools::ShortEdgeCollapse::setGeometry(osg::Geometry*)’:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/ShortEdgeOp.cpp:1710:20: error: ‘class osg::Geometry’ has no member named ‘suitableForOptimization’
+if (_geometry->suitableForOptimization())
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/lib/osgWorks-2.0/osgwTools/ShortEdgeOp.cpp:1714:20: error: ‘class osg::Geometry’ has no member named ‘copyToAndOptimize’
+  _geometry->copyToAndOptimize(*_geometry);
+  ^
+  make[2]: *** [lib/osgWorks-2.0/CMakeFiles/osgWorks.dir/osgwTools/TangentSpaceOp.cpp.o] エラー 1
+  make[2]: *** 未完了のジョブを待っています....
+  make[2]: *** [lib/osgWorks-2.0/CMakeFiles/osgWorks.dir/osgwTools/TransparencyUtils.cpp.o] エラー 1
+  make[2]: *** [lib/osgWorks-2.0/CMakeFiles/osgWorks.dir/osgwTools/CountsVisitor.cpp.o] エラー 1
+  make[2]: *** [lib/osgWorks-2.0/CMakeFiles/osgWorks.dir/osgwTools/ShortEdgeOp.cpp.o] エラー 1
+  make[1]: *** [lib/osgWorks-2.0/CMakeFiles/osgWorks.dir/all] エラー 2
+  make[1]: *** 未完了のジョブを待っています....
+  CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::error_with_option_name::~error_with_option_name()' 内:
+  video_merger.cpp:(.text._ZN5boost15program_options22error_with_option_nameD2Ev[_ZN5boost15program_options22error_with_option_nameD5Ev]+0x16): `vtable for boost::program_options::error_with_option_name' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::value_semantic_codecvt_helper<char>::value_semantic_codecvt_helper()' 内:
+video_merger.cpp:(.text._ZN5boost15program_options29value_semantic_codecvt_helperIcEC2Ev[_ZN5boost15program_options29value_semantic_codecvt_helperIcEC5Ev]+0x1f): `vtable for boost::program_options::value_semantic_codecvt_helper<char>' に対する定義されていない参照です
+   CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::value_semantic_codecvt_helper<char>::~value_semantic_codecvt_helper()' 内:
+   video_merger.cpp:(.text._ZN5boost15program_options29value_semantic_codecvt_helperIcED2Ev[_ZN5boost15program_options29value_semantic_codecvt_helperIcED5Ev]+0x13): `vtable for boost::program_options::value_semantic_codecvt_helper<char>' に対する定義されていない参照です
+ CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options20invalid_option_valueE[_ZTVN5boost15program_options20invalid_option_valueE]+0x20): `boost::program_options::error_with_option_name::what() const' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options20invalid_option_valueE[_ZTVN5boost15program_options20invalid_option_valueE]+0x30): `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options16validation_errorE[_ZTVN5boost15program_options16validation_errorE]+0x20): `boost::program_options::error_with_option_name::what() const' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options16validation_errorE[_ZTVN5boost15program_options16validation_errorE]+0x30): `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const' に対する定義されていない参照です
+ CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTIN5boost15program_options16validation_errorE[_ZTIN5boost15program_options16validation_errorE]+0x10): `typeinfo for boost::program_options::error_with_option_name' に対する定義されていない参照です
+  CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `Parameter<std::string>::addToBoost(boost::program_options::options_description&)' 内:
+  video_merger.cpp:(.text._ZN9ParameterISsE10addToBoostERN5boost15program_options19options_descriptionE[_ZN9ParameterISsE10addToBoostERN5boost15program_options19options_descriptionE]+0x84): `boost::program_options::options_description::add_options()' に対する定義されていない参照です
+ video_merger.cpp:(.text._ZN9ParameterISsE10addToBoostERN5boost15program_options19options_descriptionE[_ZN9ParameterISsE10addToBoostERN5boost15program_options19options_descriptionE]+0x9d): `boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `ParameterVec<std::string>::addToBoost(boost::program_options::options_description&)' 内:
+video_merger.cpp:(.text._ZN12ParameterVecISsE10addToBoostERN5boost15program_options19options_descriptionE[_ZN12ParameterVecISsE10addToBoostERN5boost15program_options19options_descriptionE]+0x8c): `boost::program_options::options_description::add_options()' に対する定義されていない参照です
+  video_merger.cpp:(.text._ZN12ParameterVecISsE10addToBoostERN5boost15program_options19options_descriptionE[_ZN12ParameterVecISsE10addToBoostERN5boost15program_options19options_descriptionE]+0xa5): `boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options11typed_valueISt6vectorISsSaISsEEcEE[_ZTVN5boost15program_options11typed_valueISt6vectorISsSaISsEEcEE]+0x38): `boost::program_options::value_semantic_codecvt_helper<char>::parse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, bool) const' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost15program_options11typed_valueISscEE[_ZTVN5boost15program_options11typed_valueISscEE]+0x38): `boost::program_options::value_semantic_codecvt_helper<char>::parse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, bool) const' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTIN5boost15program_options11typed_valueISt6vectorISsSaISsEEcEE[_ZTIN5boost15program_options11typed_valueISt6vectorISsSaISsEEcEE]+0x18): `typeinfo for boost::program_options::value_semantic_codecvt_helper<char>' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTIN5boost15program_options11typed_valueISscEE[_ZTIN5boost15program_options11typed_valueISscEE]+0x18): `typeinfo for boost::program_options::value_semantic_codecvt_helper<char>' に対する定義されていない参照です
+ CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::typed_value<std::vector<std::string, std::allocator<std::string> >, char>::name() const' 内:
+ video_merger.cpp:(.text._ZNK5boost15program_options11typed_valueISt6vectorISsSaISsEEcE4nameEv[_ZNK5boost15program_options11typed_valueISt6vectorISsSaISsEEcE4nameEv]+0x26): `boost::program_options::arg' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::typed_value<std::string, char>::name() const' 内:
+    video_merger.cpp:(.text._ZNK5boost15program_options11typed_valueISscE4nameEv[_ZNK5boost15program_options11typed_valueISscE4nameEv]+0x26): `boost::program_options::arg' に対する定義されていない参照です
+   CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::typed_value<std::string, char>::xparse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&) const' 内:
+   video_merger.cpp:(.text._ZNK5boost15program_options11typed_valueISscE6xparseERNS_3anyERKSt6vectorISsSaISsEE[_ZNK5boost15program_options11typed_valueISscE6xparseERNS_3anyERKSt6vectorISsSaISsEE]+0x9a): `boost::program_options::validate(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, std::string*, int)' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `void boost::program_options::validate<std::string, char>(boost::any&, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::vector<std::string, std::allocator<std::string> >*, int)' 内:
+    video_merger.cpp:(.text._ZN5boost15program_options8validateISscEEvRNS_3anyERKSt6vectorISbIT0_St11char_traitsIS5_ESaIS5_EESaIS9_EEPS4_IT_SaISE_EEi[_ZN5boost15program_options8validateISscEEvRNS_3anyERKSt6vectorISbIT0_St11char_traitsIS5_ESaIS5_EESaIS9_EEPS4_IT_SaISE_EEi]+0x14a): `boost::program_options::validate(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, std::string*, int)' に対する定義されていない参照です
+  video_merger.cpp:(.text._ZN5boost15program_options8validateISscEEvRNS_3anyERKSt6vectorISbIT0_St11char_traitsIS5_ESaIS5_EESaIS9_EEPS4_IT_SaISE_EEi[_ZN5boost15program_options8validateISscEEvRNS_3anyERKSt6vectorISbIT0_St11char_traitsIS5_ESaIS5_EESaIS9_EEPS4_IT_SaISE_EEi]+0x2c5): `boost::program_options::invalid_option_value::invalid_option_value(std::string const&)' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o: 関数 `boost::program_options::error_with_option_name::error_with_option_name(boost::program_options::error_with_option_name const&)' 内:
+video_merger.cpp:(.text._ZN5boost15program_options22error_with_option_nameC2ERKS1_[_ZN5boost15program_options22error_with_option_nameC5ERKS1_]+0x2b): `vtable for boost::program_options::error_with_option_name' に対する定義されていない参照です
+ CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE]+0x28): `boost::program_options::error_with_option_name::what() const' に対する定義されていない参照です
+   CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE]+0x38): `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const' に対する定義されていない参照です
+CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE]+0x20): `boost::program_options::error_with_option_name::what() const' に対する定義されていない参照です
+    CMakeFiles/video_merger.dir/video_merger.cpp.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE]+0x30): `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const' に対する定義されていない参照です
+   libutils.a(config.cpp.o): 関数 `Parser::read(int, char**)' 内:
+    config.cpp:(.text+0x22): `boost::program_options::options_description::m_default_line_length' に対する定義されていない参照です
+config.cpp:(.text+0x2c): `boost::program_options::options_description::m_default_line_length' に対する定義されていない参照です
+ config.cpp:(.text+0x3d): `boost::program_options::options_description::options_description(unsigned int, unsigned int)' に対する定義されていない参照です
+  config.cpp:(.text+0x4c): `boost::program_options::options_description::add_options()' に対する定義されていない参照です
+   config.cpp:(.text+0x6c): `boost::program_options::options_description_easy_init::operator()(char const*, char const*)' に対する定義されていない参照です
+    config.cpp:(.text+0x4df): `boost::program_options::variables_map::variables_map()' に対する定義されていない参照です
+ config.cpp:(.text+0x549): `boost::program_options::store(boost::program_options::basic_parsed_options<char> const&, boost::program_options::variables_map&, bool)' に対する定義されていない参照です
+   config.cpp:(.text+0x628): `boost::program_options::operator<<(std::ostream&, boost::program_options::options_description const&)' に対する定義されていない参照です
+config.cpp:(.text+0x64e): `boost::program_options::notify(boost::program_options::variables_map&)' に対する定義されていない参照です
+  libutils.a(config.cpp.o): 関数 `boost::program_options::basic_command_line_parser<char>::basic_command_line_parser(int, char const* const*)' 内:
+   config.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcEC2EiPKPKc[_ZN5boost15program_options25basic_command_line_parserIcEC5EiPKPKc]+0x76): `boost::program_options::detail::cmdline::cmdline(std::vector<std::string, std::allocator<std::string> > const&)' に対する定義されていない参照です
+  libutils.a(config.cpp.o): 関数 `boost::program_options::basic_command_line_parser<char>::options(boost::program_options::options_description const&)' 内:
+   config.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE[_ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE]+0x1f): `boost::program_options::detail::cmdline::set_options_description(boost::program_options::options_description const&)' に対する定義されていない参照です
+   libutils.a(config.cpp.o): 関数 `boost::program_options::basic_command_line_parser<char>::run()' 内:
+    config.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x19): `boost::program_options::detail::cmdline::get_canonical_option_prefix()' に対する定義されていない参照です
+  config.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x45): `boost::program_options::detail::cmdline::run()' に対する定義されていない参照です
+libutils.a(config.cpp.o): 関数 `std::vector<std::string, std::allocator<std::string> > boost::program_options::to_internal<std::string>(std::vector<std::string, std::allocator<std::string> > const&)' 内:
+ config.cpp:(.text._ZN5boost15program_options11to_internalISsEESt6vectorISsSaISsEERKS2_IT_SaIS5_EE[_ZN5boost15program_options11to_internalISsEESt6vectorISsSaISsEERKS2_IT_SaIS5_EE]+0x46): `boost::program_options::to_internal(std::string const&)' に対する定義されていない参照です
+   libutils.a(config.cpp.o): 関数 `boost::program_options::variables_map::~variables_map()' 内:
+    config.cpp:(.text._ZN5boost15program_options13variables_mapD2Ev[_ZN5boost15program_options13variables_mapD5Ev]+0x14): `vtable for boost::program_options::variables_map' に対する定義されていない参照です
+   collect2: error: ld returned 1 exit status
+   make[2]: *** [bin/video_merger] エラー 1
+   make[1]: *** [src/utils/CMakeFiles/video_merger.dir/all] エラー 2
+   In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/get_table2.cpp:1:0:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:41:1: error: ‘PointIndices’ in namespace ‘pcl’ does not name a type
+   pcl::PointIndices::Ptr neighborIndices(ColorCloudPtr cloud_in, ColorCloudPtr cloud_neighbor, float radius_search, int color_squared_dist);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   ColorCloudPtr extractBorder(ColorCloudPtr cloud_in, ColorCloudPtr cloud_veil = new ColorCloudPtr(), ColorCloudPtr cloud_shadow = new ColorCloudPtr());
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   make[2]: *** [src/clouds/CMakeFiles/clouds.dir/get_table2.cpp.o] エラー 1
+   make[2]: *** 未完了のジョブを待っています....
+   In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:1:0:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:15:37: error: ‘btTransform’ does not name a type
+   void broadcastKinectTransform(const btTransform& transform, const std::string& kinect_rgb_optical, const std::string& ground, tf::TransformBroadcaster& broadcaster, const tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:15:50: error: ISO C++ forbids declaration of ‘transform’ with no type [-fpermissive]
+   void broadcastKinectTransform(const btTransform& transform, const std::string& kinect_rgb_optical, const std::string& ground, tf::TransformBroadcaster& broadcaster, const tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:17:1: error: ‘btTransform’ does not name a type
+   btTransform waitForAndGetTransform(const tf::TransformListener& listener, std::string target_frame, std::string source_frame);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:28: error: ‘btTransform’ was not declared in this scope
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:41: error: ‘out’ was not declared in this scope
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:46: error: expected primary-expression before ‘const’
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:74: error: expected primary-expression before ‘const’
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:125: error: expected primary-expression before ‘&’ token
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:127: error: ‘listener’ was not declared in this scope
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:135: error: expression list treated as compound expression in initializer [-fpermissive]
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+   ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:14:37: error: ‘btTransform’ does not name a type
+   void broadcastKinectTransform(const btTransform& transform, const std::string& kinect_rgb_optical, const std::string& ground, tf::TransformBroadcaster& broadcaster, const tf::TransformListener& listener) {
+^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:14:50: error: ISO C++ forbids declaration of ‘transform’ with no type [-fpermissive]
+  void broadcastKinectTransform(const btTransform& transform, const std::string& kinect_rgb_optical, const std::string& ground, tf::TransformBroadcaster& broadcaster, const tf::TransformListener& listener) {
+    ^
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp: In function ‘void broadcastKinectTransform(const int&, const string&, const string&, tf::TransformBroadcaster&, const tf::TransformListener&)’:
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:19:75: error: ‘class tf::StampedTransform’ has no member named ‘asBt’
+ broadcaster.sendTransform(tf::StampedTransform(transform * tfTransform.asBt().inverse(), ros::Time::now(), ground, link));
+    ^
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:21:106: error: no matching function for call to ‘tf::StampedTransform::StampedTransform(const int&, ros::Time, const string&, const string&)’
+ broadcaster.sendTransform(tf::StampedTransform(transform, ros::Time::now(), ground, kinect_rgb_optical));
+    ^
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:21:106: note: candidates are:
+ In file included from /opt/ros/indigo/include/tf/time_cache.h:38:0,
+    from /opt/ros/indigo/include/tf/tf.h:43,
+    from /opt/ros/indigo/include/tf/transform_broadcaster.h:36,
+    from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:5,
+    from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:1:
+ /opt/ros/indigo/include/tf/transform_datatypes.h:91:3: note: tf::StampedTransform::StampedTransform()
+ StampedTransform() { };
+    ^
+ /opt/ros/indigo/include/tf/transform_datatypes.h:91:3: note:   candidate expects 0 arguments, 4 provided
+ In file included from /opt/ros/indigo/include/tf/time_cache.h:38:0,
+    from /opt/ros/indigo/include/tf/tf.h:43,
+    from /opt/ros/indigo/include/tf/transform_broadcaster.h:36,
+    from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:5,
+    from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:1:
+ /opt/ros/indigo/include/tf/transform_datatypes.h:87:3: note: tf::StampedTransform::StampedTransform(const tf::Transform&, const ros::Time&, const string&, const string&)
+ StampedTransform(const tf::Transform& input, const ros::Time& timestamp, const std::string & frame_id, const std::string & child_frame_id):
+   ^
+/opt/ros/indigo/include/tf/transform_datatypes.h:87:3: note:   no known conversion for argument 1 from ‘const int’ to ‘const tf::Transform&’
+ /opt/ros/indigo/include/tf/transform_datatypes.h:81:7: note: tf::StampedTransform::StampedTransform(const tf::StampedTransform&)
+ class StampedTransform : public tf::Transform
+ ^
+ /opt/ros/indigo/include/tf/transform_datatypes.h:81:7: note:   candidate expects 1 argument, 4 provided
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp: At global scope:
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:25:1: error: ‘btTransform’ does not name a type
+ btTransform waitForAndGetTransform(const tf::TransformListener& listener, std::string target_frame, std::string source_frame) {
+   ^
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:28: error: redefinition of ‘bool lookupLatestTransform’
+bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+  ^
+    In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:1:0:
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.h:18:6: error: ‘bool lookupLatestTransform’ previously defined here
+    bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener);
+  ^
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:28: error: ‘btTransform’ was not declared in this scope
+    bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:41: error: ‘out’ was not declared in this scope
+   bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:46: error: expected primary-expression before ‘const’
+  bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+    ^
+ /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:74: error: expected primary-expression before ‘const’
+ bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+   ^
+/home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:125: error: expected primary-expression before ‘&’ token
+bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+  ^
+    /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_ros.cpp:40:127: error: ‘listener’ was not declared in this scope
+    bool lookupLatestTransform(btTransform& out, const std::string& toFrame, const std::string& fromFrame, tf::TransformListener& listener) {
+ ^
+   In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp:1:0:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:41:1: error: ‘PointIndices’ in namespace ‘pcl’ does not name a type
+   pcl::PointIndices::Ptr neighborIndices(ColorCloudPtr cloud_in, ColorCloudPtr cloud_neighbor, float radius_search, int color_squared_dist);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   ColorCloudPtr extractBorder(ColorCloudPtr cloud_in, ColorCloudPtr cloud_veil = new ColorCloudPtr(), ColorCloudPtr cloud_shadow = new ColorCloudPtr());
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   make[2]: *** [src/clouds/CMakeFiles/clouds.dir/utils_ros.cpp.o] エラー 1
+   In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/table.cpp:2:0:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:41:1: error: ‘PointIndices’ in namespace ‘pcl’ does not name a type
+   pcl::PointIndices::Ptr neighborIndices(ColorCloudPtr cloud_in, ColorCloudPtr cloud_neighbor, float radius_search, int color_squared_dist);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   ColorCloudPtr extractBorder(ColorCloudPtr cloud_in, ColorCloudPtr cloud_veil = new ColorCloudPtr(), ColorCloudPtr cloud_shadow = new ColorCloudPtr());
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.h:42:149: error: could not convert ‘(operator new(16ul), (<statement>, ((ColorCloudPtr*)<anonymous>)))’ from ‘ColorCloudPtr* {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >*}’ to ‘ColorCloudPtr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >}’
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_pcl.cpp: In function ‘ColorCloudPtr fromROSMsg1(const PointCloud2&)’:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_pcl.cpp:230:5: error: ‘fromROSMsg’ is not a member of ‘pcl’
+   pcl::fromROSMsg(msg,*cloud);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/utils_pcl.cpp:235:5: error: ‘fromROSMsg’ is not a member of ‘pcl’
+   pcl::fromROSMsg(msg, *cloud);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp: In function ‘ColorCloudPtr smoothSurface(ColorCloudPtr)’:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp:120:7: error: ‘class pcl::MovingLeastSquares<pcl::PointXYZRGB, pcl::PointNormal>’ has no member named ‘reconstruct’
+   mls.reconstruct (*out);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp: In function ‘void labelCloud(ColorCloudPtr, const cv::Mat&)’:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp:449:19: error: ‘struct pcl::PointXYZRGB’ has no member named ‘_unused’
+   in->points[i]._unused = labels.at<uint8_t>(uv(i,0), uv(i,1));
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp: In function ‘ColorCloudPtr filterNeighbors(ColorCloudPtr, ColorCloudPtr, float, int, bool)’:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/cloud_ops.cpp:695:120: error: ‘neighborIndices’ was not declared in this scope
+   pcl::PointIndices::Ptr indices_neighbor = neighborIndices(cloud_in, cloud_neighbor, radius_search, color_squared_dist);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp: In function ‘ColorCloudPtr getAndTransformPointCloud(sensor_msgs::PointCloud2ConstPtr, std::string)’:
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:36:30: error: no matching function for call to ‘fromROSMsg(const sensor_msgs::PointCloud2_<std::allocator<void> >&, pcl::PointCloud<pcl::PointXYZRGB>&)’
+   pcl::fromROSMsg(*msg, *cloud);
+ ^
+   /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:36:30: note: candidates are:
+   In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:4:0:
+   /usr/local/include/pcl-1.8/pcl/ros/conversions.h:68:3: note: template<class PointT> void pcl::fromROSMsg(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&, const MsgFieldMap&)
+   fromROSMsg (const pcl::PCLPointCloud2& msg, pcl::PointCloud<PointT>& cloud,
+  ^
+  /usr/local/include/pcl-1.8/pcl/ros/conversions.h:68:3: note:   template argument deduction/substitution failed:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:36:30: note:   cannot convert ‘msg.boost::shared_ptr<T>::operator*<const sensor_msgs::PointCloud2_<std::allocator<void> > >()’ (type ‘const sensor_msgs::PointCloud2_<std::allocator<void> >’) to type ‘const pcl::PCLPointCloud2&’
+  pcl::fromROSMsg(*msg, *cloud);
+  ^
+  In file included from /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:4:0:
+  /usr/local/include/pcl-1.8/pcl/ros/conversions.h:81:3: note: template<class PointT> void pcl::fromROSMsg(const pcl::PCLPointCloud2&, pcl::PointCloud<PointT>&)
+  fromROSMsg (const pcl::PCLPointCloud2& msg, pcl::PointCloud<PointT>& cloud)
+  ^
+  /usr/local/include/pcl-1.8/pcl/ros/conversions.h:81:3: note:   template argument deduction/substitution failed:
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:36:30: note:   cannot convert ‘msg.boost::shared_ptr<T>::operator*<const sensor_msgs::PointCloud2_<std::allocator<void> > >()’ (type ‘const sensor_msgs::PointCloud2_<std::allocator<void> >’) to type ‘const pcl::PCLPointCloud2&’
+  pcl::fromROSMsg(*msg, *cloud);
+  ^
+  /home/ban-masa/workspace/bullet_ws/src/bulletsim/bulletsim/src/clouds/save_cloud_node.cpp:50:83: error: ‘class tf::StampedTransform’ has no member named ‘asBt’
+  pcl::transformPointCloud(*cloud.get(), *cloud.get(), toEigenTransform(transform.asBt()));
+  ^
+  make[2]: *** [src/clouds/CMakeFiles/clouds.dir/utils_pcl.cpp.o] エラー 1
+  make[2]: *** [src/clouds/CMakeFiles/clouds.dir/table.cpp.o] エラー 1
+  make[2]: *** [src/clouds/CMakeFiles/save_cloud_node.dir/save_cloud_node.cpp.o] エラー 1
+  make[1]: *** [src/clouds/CMakeFiles/save_cloud_node.dir/all] エラー 2
+  make[2]: *** [src/clouds/CMakeFiles/clouds.dir/cloud_ops.cpp.o] エラー 1
+  make[1]: *** [src/clouds/CMakeFiles/clouds.dir/all] エラー 2
+  make: *** [all] エラー 2
+  cd /home/ban-masa/workspace/bullet_ws/build/bulletsim; catkin build --get-env bulletsim | catkin env -si  /usr/bin/make --jobserver-fds=6,7 -j; cd -
+  .............................................................................................................................................
+  Failed<< bulletsim:make [ Exited with code 2 ]
+  Failed    <<< bulletsim [ 12.7 seconds ]
+  [build] Summary: 1 of 2 packages succeeded.
+  [build]   Ignored:   None.
+  [build]   Warnings:  None.
+  [build]   Abandoned: None.
+  [build]   Failed:    1 packages failed.
+  [build] Runtime: 13.0 seconds total.
