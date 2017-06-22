@@ -18,6 +18,7 @@
 #include "simulation/bullet_io.h"
 #include "simulation/softbodies.h"
 #include "utils/logging.h"
+#include <iostream>
 
 //DEBUG
 #include "physics_tracker.h"
@@ -58,6 +59,9 @@ TrackedObject::Ptr toTrackedObject(const bulletsim_msgs::ObjectInit& initMsg, Co
 	  printf("Resolution: %d %d\n", resolution_x, resolution_y);
 
 	  vector<btVector3> poly_corners = polyCorners(cloud);
+    for (vector<btVector3>::iterator it = poly_corners.begin(); it != poly_corners.end(); it++) {
+      printf("x: %f, y: %f, z: %f\n", it->x(), it->y(), it->z());
+    }
 	  //BOOST_FOREACH(btVector3& poly_corner, poly_corners) util::drawSpheres(poly_corner, Vector3f(1,0,0), 0.5, 2, env);
   	BulletSoftObject::Ptr sim = makeCloth(poly_corners, resolution_x, resolution_y, mass);
   	if (!image.empty())

@@ -13,6 +13,7 @@
 #include "utils/cvmat.h"
 #include "utils/config.h"
 #include "simulation/bullet_io.h"
+#include <iostream>
 
 using namespace std;
 
@@ -176,7 +177,7 @@ btSoftBody*	CreateFromSoftBodyExcludeFaces(btSoftBody* softBody, vector<int> exc
 	int exclude_idx = 0;
 	idx = 0;
 	for (int j=0; j<faces.size(); j++) {
-		if (j == exclude_faces_idx[exclude_idx]) {
+		if ((exclude_faces_idx.size() > 0) && (j == exclude_faces_idx[exclude_idx])) {
 			exclude_idx++;
 		} else {
 			assert(face2nodes[j].size() == 3);

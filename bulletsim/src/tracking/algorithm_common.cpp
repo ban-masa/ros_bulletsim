@@ -262,7 +262,23 @@ Eigen::MatrixXf calculateResponsibilities(const Eigen::MatrixXf& estPts, const E
 	pZgivenC.row(K) = outlierInvStdev.prod() * pZgivenC_exp_part.row(K);
 
 	//normalize cols
-	pZgivenC = pZgivenC * ((VectorXf) pZgivenC.colwise().sum().array().inverse()).asDiagonal();
+  if ((pZgivenC.colwise().sum().array().inverse().cols() < 1) || (pZgivenC.colwise().sum().array().inverse().rows() < 1)) {
+    std::cout << pZgivenC.colwise().sum().array().inverse().cols() << " " << pZgivenC.colwise().sum().array().inverse().rows() << " " << std::endl;
+    std::cout << "Error in calculateResponsibilities " << std::endl;
+    exit(1);
+  } else {
+    ArrayXf temp = pZgivenC.colwise().sum().array().inverse();
+    VectorXf temp_vect(max(temp.cols(), temp.rows()));
+    if (temp.cols() < temp.rows()) {
+      for (int i = 0; i < temp.rows(); i++) temp_vect(i) = temp(i, 0);
+    } else {
+      for (int i = 0; i < temp.cols(); i++) temp_vect(i) = temp(0, i);
+    }
+	  pZgivenC = pZgivenC * (temp_vect.asDiagonal());
+  }
+
+//  std::cout << pZgivenC.rows() << " " << pZgivenC.cols() << " " << temp.asDiagonal().rows() << " " << temp.asDiagonal().cols() << " " << std::endl;
+
 
 	//iteratively normalize rows and columns. columns are normalized to one and rows are normalized to the visibility term.
 	for (int i=0; i<TrackingConfig::normalizeIter; i++) {
@@ -278,9 +294,22 @@ Eigen::MatrixXf calculateResponsibilities(const Eigen::MatrixXf& estPts, const E
 		//pZgivenC.row(K) /= pZgivenC.row(K).sum();
 
 		//normalize cols
-		pZgivenC = pZgivenC * ((VectorXf) pZgivenC.colwise().sum().array().inverse()).asDiagonal();
-	}
 
+    if ((pZgivenC.colwise().sum().array().inverse().cols() < 1) || (pZgivenC.colwise().sum().array().inverse().rows() < 1)) {
+      std::cout << pZgivenC.colwise().sum().array().inverse().cols() << " " << pZgivenC.colwise().sum().array().inverse().rows() << " " << std::endl;
+      std::cout << "Error in calculateResponsibilities " << std::endl;
+      exit(1);
+    } else {
+      ArrayXf temp = pZgivenC.colwise().sum().array().inverse();
+      VectorXf temp_vect(max(temp.cols(), temp.rows()));
+      if (temp.cols() < temp.rows()) {
+        for (int i = 0; i < temp.rows(); i++) temp_vect(i) = temp(i, 0);
+      } else {
+        for (int i = 0; i < temp.cols(); i++) temp_vect(i) = temp(0, i);
+      }
+      pZgivenC = pZgivenC * (temp_vect.asDiagonal());
+    }
+  }
 	//assert(isFinite(pZgivenC));
 	assert(pZgivenC.rows() == K+1);
 	assert(pZgivenC.cols() == N);
